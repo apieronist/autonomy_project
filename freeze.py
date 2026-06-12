@@ -1,8 +1,9 @@
 from flask_frozen import Freezer
-from app import app  # Asegúrate de que tu archivo principal se llame app.py
+from app import app
 
-# Le decimos que guarde todo en la carpeta 'docs' para GitHub Pages
 app.config['FREEZER_DESTINATION'] = 'docs'
+# Esta línea hace que los enlaces funcionen de forma relativa en cualquier servidor
+app.config['FREEZER_RELATIVE_URLS'] = True 
 
 freezer = Freezer(app)
 
