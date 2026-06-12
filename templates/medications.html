@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block main %}
+<div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+
+        <h1 class="fw-bold mb-4">💊 Manage Medications</h1>
+
+        <div class="dashboard-card mb-4 shadow-sm">
+            <h3 class="fw-bold text-secondary mb-3">Add New Medication</h3>
+
+            <form id="medication-form">
+                <div class="mb-3">
+                    <label for="med-name" class="form-label fw-bold">Medication Name</label>
+                    <input type="text" class="form-control form-control-lg" id="med-name" placeholder="e.g., Aspirin" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="med-dosage" class="form-label fw-bold">Dosage</label>
+                    <input type="text" class="form-control form-control-lg" id="med-dosage" placeholder="e.g., 1 pill, 5 ml" required>
+                </div>
+
+                <div class="mb-4">
+                    <label for="med-time" class="form-label fw-bold">Schedule Time</label>
+                    <input type="time" class="form-control form-control-lg" id="med-time" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-accessible">
+                    💾 Save Medication
+                </button>
+            </form>
+        </div>
+
+        <h3 class="fw-bold text-secondary mb-3">Current Medications</h3>
+        <div id="current-meds-list">
+            </div>
+
+    </div>
+</div>
+{% endblock %}

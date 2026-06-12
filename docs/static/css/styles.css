@@ -1,0 +1,52 @@
+/* static/css/styles.css */
+
+:root {
+    --primary-color: #0d6efd;
+    --success-color: #198754;
+    --danger-color: #dc3545;
+    --warning-color: #ffc107;
+}
+
+body {
+    font-size: 1.25rem; /* Texto base más grande de lo normal para facilitar la lectura */
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+/* Botones de acción masivos para evitar errores de pulsación */
+.btn-accessible {
+    padding: 1.5rem 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ocupa todo el ancho disponible en móviles */
+    margin-bottom: 1rem;
+}
+
+/* Alertas visuales de alto contraste que parpadean o llaman la atención */
+.alert-urgent {
+    background-color: var(--danger-color);
+    color: white;
+    font-weight: bold;
+    border-left: 10px solid #801010;
+    padding: 2rem;
+    font-size: 1.6rem;
+    border-radius: 12px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
+
+/* Contenedores de tarjetas adaptables */
+.dashboard-card {
+    border: 2px solid #dee2e6;
+    border-radius: 16px;
+    background-color: white;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}

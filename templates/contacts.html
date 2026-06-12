@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block main %}
+<div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+
+        <h1 class="fw-bold mb-4">📞 Emergency Contacts</h1>
+
+        <div class="dashboard-card mb-4 shadow-sm">
+            <h3 class="fw-bold text-secondary mb-3">Add New Contact</h3>
+
+            <form id="contact-form">
+                <div class="mb-3">
+                    <label for="contact-name" class="form-label fw-bold">Full Name</label>
+                    <input type="text" class="form-control form-control-lg" id="contact-name" placeholder="e.g., John Doe" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="contact-relationship" class="form-label fw-bold">Relationship</label>
+                    <input type="text" class="form-control form-control-lg" id="contact-relationship" placeholder="e.g., Son, Doctor, Neighbor" required>
+                </div>
+
+                <div class="mb-4">
+                    <label for="contact-phone" class="form-label fw-bold">Phone Number</label>
+                    <input type="tel" class="form-control form-control-lg" id="contact-phone" placeholder="e.g., +54291xxxxxxx" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-accessible">
+                    💾 Save Contact
+                </button>
+            </form>
+        </div>
+
+        <h3 class="fw-bold text-secondary mb-3">Emergency Directory</h3>
+        <div id="contacts-list">
+            </div>
+
+    </div>
+</div>
+{% endblock %}
