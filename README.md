@@ -82,7 +82,7 @@ El proyecto fue concebido bajo una filosofía central: **accesibilidad y resilie
 
 ## Estructura del Proyecto y Arquitectura
 
-
+```text
 project/
 ├── app.py                 # Servidor ligero en Flask que actúa como despachador de la aplicación.
 ├── helpers.py             # Utilidades auxiliares en Python para el mantenimiento del servidor.
