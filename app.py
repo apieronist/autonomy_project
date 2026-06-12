@@ -16,14 +16,13 @@ def after_request(response):
 def index():
     return render_template("index.html")
 
-@app.route("/medications.html")  # <--- Agregale el .html acá
+@app.route("/medications")
 def medications():
     return render_template("medications.html")
 
-@app.route("/contacts.html")     # <--- Agregale el .html acá
+@app.route("/contacts")
 def contacts():
     return render_template("contacts.html")
-
 # This allows running the app directly if needed
 if __name__ == "__main__":
     app.run(debug=True)

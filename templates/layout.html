@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema de Autonomía</title>
     <!-- Tus estilos CSS si los tienes -->
-    <link rel="stylesheet" href="./static/css/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
 
     <!-- Barra de Navegación / Botonera Móvil -->
     <nav>
         <ul>
-            <li><a href="./index.html">Inicio</a></li>
-            <li><a href="./medications.html">Medicaciones</a></li>
-            <li><a href="./contacts.html">Contactos de Emergencia</a></li>
+            <li><a href="{{ url_for('index') }}">Inicio</a></li>
+            <li><a href="{{ url_for('medications') }}">Medicaciones</a></li>
+            <li><a href="{{ url_for('contacts') }}">Contactos de Emergencia</a></li>
         </ul>
     </nav>
 
