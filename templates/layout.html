@@ -3,27 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Autonomía</title>
-    <!-- Tus estilos CSS si los tienes -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-</head>
+    <title>Sistema de Autonomía Móvil</title>
+    
+    <link rel="stylesheet" href="static/css/style.css">
+    
+    </head>
 <body>
 
-    <!-- Barra de Navegación / Botonera Móvil -->
-    <nav>
+    <header class="main-header">
+        <div class="header-container">
+            <h1>Sistema de Autonomía</h1>
+            <span class="status-badge">Operativo</span>
+        </div>
+    </header>
+
+    <nav class="mobile-nav">
         <ul>
-            <li><a href="{{ url_for('index') }}">Inicio</a></li>
-            <li><a href="{{ url_for('medications') }}">Medicaciones</a></li>
-            <li><a href="{{ url_for('contacts') }}">Contactos de Emergencia</a></li>
+            <li><a href="index.html" class="nav-link">Inicio</a></li>
+            <li><a href="medications.html" class="nav-link">Medicaciones</a></li>
+            <li><a href="contacts.html" class="nav-link">Contactos</a></li>
         </ul>
     </nav>
 
-    <hr>
+    <hr class="divider">
 
-    <!-- El bloque principal donde se inyecta el contenido de cada pantalla -->
-    <main>
-        {% block main %}{% endblock %}
+    <main class="main-content">
+        <section class="card">
+            <h2>Pantalla Base</h2>
+            <p>El contenido específico de cada sección reemplaza este bloque de texto.</p>
+        </section>
     </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2026 - Sistema de Autonomía Personal</p>
+    </footer>
 
 </body>
 </html>
