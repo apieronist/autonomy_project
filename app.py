@@ -14,17 +14,14 @@ def after_request(response):
 
 @app.route("/")
 def index():
-    """Render the main dashboard"""
     return render_template("index.html")
 
-@app.route("/medications")
+@app.route("/medications.html")  # <--- Agregale el .html acá
 def medications():
-    """Render the medication management page"""
     return render_template("medications.html")
 
-@app.route("/contacts")
+@app.route("/contacts.html")     # <--- Agregale el .html acá
 def contacts():
-    """Render the emergency contacts directory"""
     return render_template("contacts.html")
 
 # This allows running the app directly if needed
